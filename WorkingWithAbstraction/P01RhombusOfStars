@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class RhombusOfStars {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int m = Integer.parseInt(scanner.nextLine());
+        int n=m;
+        int stars=1;
+        for(int p=0;p<m;p++) {
+            for (int i = 0; i < n - 1; i++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < stars; j++) {
+                System.out.print("* ");
+            }
+            for (int k = 1; k < n - 1; k++) {
+                System.out.print(" ");
+            }
+            System.out.println();
+            n--;
+            stars++;
+        }
+
+        int m1=m;
+        int n1=1;
+        int stars1=m1-1;
+        for(int p1=0;p1<m1-1;p1++){
+            for(int i1=0;i1<n1;i1++){
+                System.out.print(" ");
+            }
+            for(int k1=0;k1<stars1;k1++){
+                System.out.print("* ");
+            }
+            for(int p=1;p<n1;p++){
+                System.out.print(" ");
+            }
+            System.out.println();
+            n1++;
+            stars1--;
+        }
+    }
+}
